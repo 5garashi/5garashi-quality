@@ -8,13 +8,13 @@
 -->
 # 5garashi.com設計事務所 品質確認規定 / Quality Rules
 
-バージョン / Version: 0.9.0([改版履歴 / Changelog](CHANGELOG.md))
+バージョン / Version: 1.0.0([改版履歴 / Changelog](CHANGELOG.md))
 
 準拠 / Conforms to: Design Office Identity 4.22.0
 
 作るもの(ソフトウェア、文書、電子回路・機器、ファームウェア)が、使う人の作業・環境・信頼を守ることを、作る段階から仕込み(作りこみ)、出す前に確かめ(試験)、記録に残すための決まりです。[Design Office Identity](https://5garashi.github.io/5garashi-identity/) が「満たすべき姿」を定めるのに対し、本規定は「満たしていることの作り方と確かめ方」を定めます。
 
-**草案**です。Web で公開しています: https://5garashi.github.io/5garashi-quality/ 。正式版(1.0.0)までは、改版で内容が変わります。
+Web で公開しています: https://5garashi.github.io/5garashi-quality/ 。1.0.0 から正式版です。
 
 ## ファイル
 

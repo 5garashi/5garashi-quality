@@ -11,6 +11,20 @@
 版ごとの変更を、新しい版を上に書く(Design Office Identity 12-7 (9))。
 Changes by version, newest first (Identity 12-7 (9)).
 
+## 1.0.0 — 2026-11-03
+
+未定の項目をすべて定め、正式版とした。
+All undecided items are defined; this is the first official version.
+
+- 第14条 リリース手順を定めた(14-1 は 0.9.0 から)。14-2 出す前の手順:変更全体を見る、版を上げる、git に入っているファイルだけで作る、作った物で試験する、出してよいか決める、配布物を確かめる、出す、出した物を使う人と同じ方法で取得して確かめる。14-3 不合格のまま出すとき:「重大」は出さない。「通常」「軽微」は判断した人・理由・影響と回避・直す予定を記録すれば出してよく、「通常」は CHANGELOG に既知の問題として書く。14-4 配布物の確認(必須の文書、版と名前、元のコミット、PC の情報や認証情報を入れない)。14-5 署名とストアへの提出(鍵を入れない、提出と公開は所有者、同じ版の番号で中身を変えない)。14-6 出荷の検査(電子回路・機器の全数)。14-7 出した後の不具合(受け付け、重さ、再現する試験と水平展開、知らせ)。mdEditor 1.0.12 の記録(手元にだけあったファイルでビルドが失敗した、出荷の判断の理由が書かれていなかった)を根拠にした。
+  Art. 14 defined: release steps, releasing with failures (never with "critical" ones), distribution checks, signing and store submission, outgoing inspection for hardware, and defects after release.
+- 6-6 を定めた:Web ページ(表示、リンク、通信、継続、公開の後)、コマンドラインのツール(引数、結果、文字とパス、作業を失わせない)、スクリプト(変える前に示す、何度流しても同じ、途中の失敗、権限と環境)。
+  6-6 defined for web pages, command-line tools, and scripts.
+- 9-2 (1) を暫定から正式にし、(d) から 14-3 を参照した。9-2 (8) を 14-3 によるとした。10-3 (6):記録と報告書は公開の場に置かなくてよく、置くときは PC の情報や使う人のデータが入っていないことを確かめる。
+  9-2 (1) is no longer interim; 9-2 (8) and 10-3 (6) are defined.
+- 表紙の「草案」の表示を外し、第15条 (2) を「1.0.0 から正式版」とした。第1条 (2) から未定の記述を外し、第15条の未定の項目の表を「未定の項目はない」とした。
+  The draft label is removed; Art. 15 (2) states that 1.0.0 is the first official version.
+
 ## 0.9.0 — 2026-11-03
 
 Identity から、確かめ方と記録の条を移した(Identity 4.22.0 と同時)。Identity には満たすべき条件を残し、本規定には確かめ方と記録を置く(Identity 1-4 (5))。
