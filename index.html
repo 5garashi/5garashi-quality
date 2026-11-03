@@ -5,7 +5,7 @@
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-13
   最終更新 / Last updated: 2026-11-03
-  版 / Version: 1.1.0
+  版 / Version: 1.2.0
   ライセンス / License: CC BY-ND 4.0(本文・構成。第15条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -150,7 +150,7 @@ footer strong{color:var(--ink)}
 
 <!-- ═══════════ 表紙 ═══════════ -->
 <header class="cover">
-  <div class="doc-no">QUALITY RULES — 第<span data-version>1.1.0</span>版</div>
+  <div class="doc-no">QUALITY RULES — 第<span data-version>1.2.0</span>版</div>
   <img class="mark" src="assets/5garashi_mark_simple.svg" width="120" height="96" alt="">
   <picture>
     <source srcset="assets/5garashi_logotype_reversed_outlined.svg" media="screen and (prefers-color-scheme: dark)">
@@ -188,8 +188,8 @@ footer strong{color:var(--ink)}
   <details>
     <summary>本版(2026-11-03)の変更点</summary>
     <ul>
-      <li>第11条 (9):TESTING.md がないときは、新しく作るとき・改版するときに、確かめずに作る。</li>
-      <li>第12条 (8) を新設:AI への共通の指示は1つの正本から、使うすべての AI が読む場所へ写し、読み込まれていることを確かめる。</li>
+      <li>13-3 (2):AI によるレビューは、別の会社の AI に、道具で自動で頼むことを基本とした。</li>
+      <li>13-3 (3):直すかどうかは、作業している AI が指摘ごとに判断してよく、指摘への答えと答えた AI を報告する。</li>
       <li>改版履歴:<span class="mono">CHANGELOG.md</span></li>
     </ul>
   </details>
@@ -805,8 +805,8 @@ footer strong{color:var(--ink)}
     <h3>13-3. 誰が行うか</h3>
     <ul class="items">
       <li><b>(1) 書いた人以外の目:</b>書いた人とは別の人が見ることを基本とする。</li>
-      <li><b>(2) AI によるレビュー:</b>見る人がいないときは、AI によるレビューを「別の目」として使ってよい。ただし、書いた AI と同じ会話の中で、書いた AI 自身に見させて終わりにしない(別の会話、別のモデル、または観点を絞った別の依頼にする)。</li>
-      <li><b>(3) AI のレビューの限界:</b>AI の指摘は、動かして確かめていない推定を含み、もっともらしい誤りもある。指摘には根拠(ファイルと行、起きる条件)を付けさせ、確かさを Identity 8-8 の語で示させる。直すかどうかの最終の判断は人が行う。</li>
+      <li><b>(2) AI によるレビュー:</b>見る人がいないときは、AI によるレビューを「別の目」として使ってよい。ただし、書いた AI と同じ会話の中で、書いた AI 自身に見させて終わりにしない(別の会話、別のモデル、または観点を絞った別の依頼にする)。別の会社の AI に、道具で自動で頼むことを基本とする。頼む AI と順番は、AI への共通の指示(第12条 (8))に決める。</li>
+      <li><b>(3) AI のレビューの限界:</b>AI の指摘は、動かして確かめていない推定を含み、もっともらしい誤りもある。指摘には根拠(ファイルと行、起きる条件)を付けさせ、確かさを Identity 8-8 の語で示させる。直すかどうかは、作業している AI が指摘ごとに判断してよい。指摘と、それぞれへの答え(直した・直さない理由)、答えた AI を報告し、人が後から確かめられるようにする。</li>
       <li><b>(4) 道具の扱い:</b>静的な解析やリンターなど、機械で判定できる指摘は、人や AI のレビューの前に自動で済ませる。</li>
     </ul>
 

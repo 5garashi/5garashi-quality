@@ -11,6 +11,16 @@
 版ごとの変更を、新しい版を上に書く(Design Office Identity 12-7 (9))。
 Changes by version, newest first (Identity 12-7 (9)).
 
+## 1.2.0 — 2026-11-03
+
+AI によるレビューを、別の会社の AI に自動で頼み、作業している AI が判断して直す形にした。
+AI reviews are requested automatically from another company's AI, and the working AI decides on the fixes.
+
+- 13-3 (2):AI によるレビューは、別の会社の AI に、道具で自動で頼むことを基本とする。頼む AI と順番は、AI への共通の指示(第12条 (8))に決める。
+  13-3 (2): ask another company's AI automatically through a tool; which AI and in what order is set in the shared AI instructions.
+- 13-3 (3):「直すかどうかの最終の判断は人が行う」を改め、作業している AI が指摘ごとに判断してよいとした。指摘と、それぞれへの答え(直した・直さない理由)、答えた AI を報告し、人が後から確かめられるようにする。5garashi.com の判断(2026-11-03)による。
+  13-3 (3): the working AI may decide on each finding, reporting the findings, its answers, and which AI answered (5garashi.com's decision, 2026-11-03).
+
 ## 1.1.0 — 2026-11-03
 
 TESTING.md を必ず作ることと、AI への共通の指示の置き方を定めた。
