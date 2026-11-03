@@ -5,7 +5,7 @@
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-13
   最終更新 / Last updated: 2026-11-03
-  版 / Version: 0.8.0
+  版 / Version: 0.9.0
   ライセンス / License: CC BY-ND 4.0(本文・構成。第15条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -96,6 +96,7 @@ section{scroll-margin-top:24px}
   font-size:12px;font-weight:800;color:var(--steel);background:var(--card); /* steel × card 昼 7.24:1 / 夜 7.81:1 */
   border:1.5px solid var(--ink);border-radius:999px;padding:2px 12px;white-space:nowrap;
 }
+pre.codeblock{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;background:var(--paper);color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto;white-space:pre} /* ink × paper 昼 7.14:1 / 夜 9.09:1 */
 .due{font-size:12.5px;color:var(--steel);font-weight:700;margin-left:6px} /* steel × card 昼 7.24:1 / 夜 7.81:1 */
 .art-body{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
 .art-body p,.art-body li{font-size:14.5px}
@@ -149,7 +150,7 @@ footer strong{color:var(--ink)}
 
 <!-- ═══════════ 表紙 ═══════════ -->
 <header class="cover">
-  <div class="doc-no">QUALITY RULES — 第<span data-version>0.8.0</span>版</div>
+  <div class="doc-no">QUALITY RULES — 第<span data-version>0.9.0</span>版</div>
   <img class="mark" src="assets/5garashi_mark_simple.svg" width="120" height="96" alt="">
   <picture>
     <source srcset="assets/5garashi_logotype_reversed_outlined.svg" media="screen and (prefers-color-scheme: dark)">
@@ -178,7 +179,7 @@ footer strong{color:var(--ink)}
     <li><a href="#a11"><span class="no">第11条</span><span>試験コードと手順書の書き方</span></a></li>
     <li><a href="#a12"><span class="no">第12条</span><span>AI エージェントに任せるとき</span></a></li>
     <li><a href="#a13"><span class="no">第13条</span><span>レビュー</span></a></li>
-    <li><a href="#a14"><span class="no">第14条</span><span>リリース手順</span><span class="tbd">未定</span></a></li>
+    <li><a href="#a14"><span class="no">第14条</span><span>リリース手順</span><span class="tbd">一部未定</span></a></li>
     <li><a href="#a15"><span class="no">第15条</span><span>版の管理と改訂</span></a></li>
   </ol>
 </nav>
@@ -188,14 +189,8 @@ footer strong{color:var(--ink)}
   <details>
     <summary>本版(2026-11-03)の変更点</summary>
     <ul>
-      <li>appAutoTester と mdEditor で実際に使っている決まりを取り入れた。</li>
-      <li>4-2「変更に応じて流す試験を選ぶ」を新設した。影響範囲をたどって範囲を決め、たどれないときは全件とする。長い全件は承認を得てから流し、出す前の全件は省かない。流した範囲を必ず書く。</li>
-      <li>3-8 (4) 水平展開と、例を集めた試験(コーパス)。3-10「受け入れる入力の範囲」を新設した。</li>
-      <li>9-2 (9) 試験を減らすときの決まり。第11条 (9) 製品ごとの TESTING.md。第12条 (6)(7) を足した。</li>
-      <li>6-1 に「画面の変更」と「訳」の行、13-1 に「訳」の行を足した。5 (8) に、途中で止めたときの後片付けを足した。</li>
-      <li>本規定を Web で公開した(第15条 (2))。正式版(1.0.0)までは草案とする。</li>
-      <li>10-3 (6) 報告書の置き場所を定めた(未定の項目から外した)。</li>
-      <li>第15条 (5)(6):開発のたびに、品質と効率を基準に決まりを見直し、足すだけでなく減らすことも検討する(Identity 1-4 (3) を参照)。改訂の効果に手間を加えた((7))。(9) 製品が従う版を書き、参照は次の改版のときに直す(Identity 4.21.0 の 12-7 (14)(15) による)。旧 (6) は (7)、旧 (7) は (8) とした。</li>
+      <li>Identity から、確かめ方と記録の条を移した。6-4「文書(Markdown と図)」を定め(Identity 8-9 (1)(5)(6) とチェックリストの 4 節から)、6-5「公開する前のアクセシビリティの確認」(Identity 7-7 の確認と記録から)、10-4「確認記録のひな形」(Identity 9-5 とチェックリストの 7 節から)、14-1「版の確認とタグ」(Identity 12-7 (6)(11) から)を新設した。</li>
+      <li>旧 6-4「ほかの種類」は 6-6 とし、Web ページ・コマンドラインのツール・スクリプトだけを未定に残した。第14条は「一部未定」とした。</li>
       <li>改版履歴:<span class="mono">CHANGELOG.md</span></li>
     </ul>
   </details>
@@ -209,7 +204,7 @@ footer strong{color:var(--ink)}
   <div class="art-body">
     <ul class="items">
       <li><b>(1) 目的:</b>5garashi.com設計事務所が作るもの(アプリ、ツール、Webページ、文書、電子回路・基板・機器、ファームウェア)が、使う人の作業・環境・信頼を守ることを、作る段階から仕込み(作りこみ)、出す前に確かめ(試験)、その結果を記録に残す。</li>
-      <li><b>(2) 範囲:</b>作りこみ(第3条)、試験(第4〜12条)、レビュー(第13条)、リリース手順(第14条)。本版は試験に重点を置き、リリース手順は定める項目だけを挙げる(未定)。</li>
+      <li><b>(2) 範囲:</b>作りこみ(第3条)、試験(第4〜12条)、レビュー(第13条)、リリース手順(第14条)。本版は試験に重点を置き、リリース手順は版の確認とタグ(14-1)だけを定め、残りは定める項目だけを挙げる(未定)。</li>
       <li><b>(3) Identity との関係:</b>Design Office Identity は「満たすべき姿」(色・操作のしやすさ・言葉づかい・プライバシーなど)を定め、本規定は「満たしていることの作り方と確かめ方」を定める。両者が食い違うときは、公開中の最新の Identity に従い、本規定を直す。本規定は Identity の値を書き写さず、条番号で参照する。</li>
       <li><b>(4) 対象:</b>ソフトウェアと文書は、Identity 12-7 の対象と同じく、1つのアプリまたは1組の文書を入れ、<span class="mono">VERSION</span> で版を管理するフォルダー。電子回路・基板・機器は、型式と版(回路図・基板・部品表・ファームウェアの版)で識別できるもの。試作や作業用のスクリプトは対象外とするが、ほかの人に渡す時点で対象になる。</li>
       <li><b>(5) 適用する規格:</b>電気製品など、法令や規格が試験を定めているものは、その要求を本規定より優先する。本規定は、規格が定めていない部分(作りこみ、記録の仕方、環境を守ることなど)を補う。当てはまる規格と版を、試験の前に特定して記録する。</li>
@@ -427,14 +422,15 @@ footer strong{color:var(--ink)}
 <section id="a6">
   <div class="art-head"><span class="chip">第6条</span><h2>必ず確かめる項目</h2></div>
   <div class="art-body">
-    <p>作るものの種類に応じて、次の表のとおりに当てはめる。第2・4・5・7・8条は、どの種類にも当てはまる。</p>
+    <p>作るものの種類に応じて、次の表のとおりに当てはめる。第2・4・5・7・8条は、どの種類にも当てはまる。画面を持つもの(アプリ、Web ページ)を公開する・版を出すときは、6-5 も当てはめる。</p>
     <div class="table-wrap" tabindex="0" role="region" aria-label="作るものの種類と当てはめる節">
       <table class="ud">
         <thead><tr><th scope="col">作るもの</th><th scope="col">当てはめる節</th></tr></thead>
         <tbody>
           <tr><td>デスクトップアプリ</td><td>6-1</td></tr>
           <tr><td>電子回路・機器(ファームウェアを含む)</td><td>6-2、6-3。PC で動く設定用・管理用のアプリが付くときは、そのアプリに 6-1 も</td></tr>
-          <tr><td>Web ページ、コマンドラインのツール、スクリプト、文書</td><td>6-4(未定)。決まるまでは 6-1 のうち当てはまる区分を使う</td></tr>
+          <tr><td>文書(Markdown と、その中の図)</td><td>6-4</td></tr>
+          <tr><td>Web ページ、コマンドラインのツール、スクリプト</td><td>6-6(未定)。決まるまでは 6-1 のうち当てはまる区分を使う</td></tr>
         </tbody>
       </table>
     </div>
@@ -499,8 +495,36 @@ footer strong{color:var(--ink)}
       </table>
     </div>
 
-    <h3>6-4. ほかの種類</h3>
-    <p><span class="badge-tbd">未定</span> Web ページ、コマンドラインのツール、スクリプト、文書(README・報告書)で必ず確かめる項目は、次版以降で定める。<span class="due">期限:正式版(1.0.0)まで/担当:5garashi.com設計事務所</span></p>
+    <h3>6-4. 文書(Markdown と図)</h3>
+    <p>Markdown で書く文書と、その中の図(Mermaid など)は、Identity 8-9 の書き方と、Identity の <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">MARKDOWN-CHECKLIST</a> の確認項目に加えて、次のとおり確かめる(Identity 4.21.0 の 8-9 (1)(5)(6) とチェックリストの 4 節から移した)。</p>
+    <ul class="items">
+      <li><b>(1) 3つを分けて確かめる:</b>構文が通ること、表示が読めること、内容が正しいことを、別々に確かめる。構文の検証や描画の成功(SVG ができた、エラーが出ない)だけで、表示の品質やアクセシビリティを確かめたことにしない。描画に成功しても、文字が枠からはみ出したり、隣と重なったりすることがあるためである。</li>
+      <li><b>(2) 配る環境で確かめる:</b>配る製品・環境と同じ描画エンジンと版、書体で確かめる。GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の両方で確かめ、一方で描画できたことだけで互換性を確かめたことにしない。Identity 8-9 (8) の文書はその製品での表示で、8-9 (9) で表示先を指定した文書はその表示先で確かめる。</li>
+      <li><b>(3) 確かめる項目:</b>
+        <ul class="plain">
+          <li>配る製品・環境と同じ描画エンジンと版で描画する。別のサイトや新しい版で描けたことだけで、成功としない。</li>
+          <li>書体の読み込みが終わってから確かめる。書体・太さ・文字の大きさが変わると、幅の測り方も変わる。</li>
+          <li>すべての図を、画像か実際のプレビューで見て、文字の重なり・切れ・枠からのはみ出しを確かめる。</li>
+          <li>ふつうの画面の幅と、狭いプレビューの幅で確かめる。縮めると文字が極端に小さくなる図は分ける。</li>
+          <li>昼と夜(Identity 4-2)の両方で、文字と線が読めることを確かめる。色だけで状態を区別していないことも確かめる(Identity 7-2)。</li>
+          <li>図だけに情報を持たせず、要点が本文や表にもあることを確かめる(Identity 7-4)。</li>
+          <li>PDF や HTML で配るときは、実際に書き出して確かめる。PDF は、改ページ、図の途中での切れ、余白、リンクを見る。</li>
+        </ul>
+      </li>
+      <li><b>(4) 記録:</b>自動の確認と目視の確認を分けて、10-4 (2) のひな形で記録する。確かめていない表示の条件や読み上げを「確認済み」にしない(Identity 8-8)。</li>
+      <li><b>(5) 置き場所:</b>全製品に共通する書き方の確認項目は Identity の MARKDOWN-CHECKLIST に、確かめ方は本節に置く。製品ごとの描画エンジンの版・対応する記法・確かめ方・不具合と検証の記録(mdEditor の同梱エンジンの版と検証結果を含む)は、その製品のリポジトリ(TESTING.md など。第11条 (9))に置く。</li>
+    </ul>
+
+    <h3>6-5. 公開する前のアクセシビリティの確認</h3>
+    <p><a href="https://5garashi.github.io/5garashi-identity/#a7">Identity 7-7</a> の条件 (a)〜(k) を満たしていることを、次のとおり確かめて記録する(Identity 4.21.0 の 7-7 と 9-5 から移した)。</p>
+    <ul class="items">
+      <li><b>(1) いつ:</b>新しい道具を公開する前と、画面や操作を変えた版を出す前。</li>
+      <li><b>(2) すべての項目に判定を付ける:</b>(a)〜(k) のすべてに、合格・不合格・未実施・適用外(9-1)を付ける。当てはまらない項目(夜の配色がない、外部のファイルを読み込まないなど)は、適用外とその根拠を書く。自動で確かめられるもの(拡大と画面の幅、部品の名前と大きさ、色の比など)は自動の試験(第4条の層 4)で確かめる。画面読み上げソフトなど自動にできないものは人が確かめ、確かめていなければ未実施として挙げる(9-2 (7))。</li>
+      <li><b>(3) 記録:</b>確認した日付、使ったブラウザーやツール、確かめた組み合わせ(表示 × 言語 × 画面の大きさ)、項目ごとの結果を、README か試験報告書に残す。書式は 10-4 (1) のひな形による。コントラスト比を測ったときは、確認日と計算方法を書く(Identity 7-1)。</li>
+    </ul>
+
+    <h3>6-6. ほかの種類</h3>
+    <p><span class="badge-tbd">未定</span> Web ページ、コマンドラインのツール、スクリプトで必ず確かめる項目は、次版以降で定める。画面を持つものは、それまでも 6-5 を当てはめる。<span class="due">期限:正式版(1.0.0)まで/担当:5garashi.com設計事務所</span></p>
   </div>
 </section>
 
@@ -590,7 +614,7 @@ footer strong{color:var(--ink)}
       <li><b>(4) 試験を変えて合格にしたとき:</b>何を、なぜ変えたか(期待した値の誤り、待ち方の不足など)を、コミットの説明か報告書に記録する。</li>
       <li><b>(5) 結果を消さない:</b>やり直す前の結果、失敗した回の結果も、上書き・削除せずに残す。やり直した理由、変えたこと、前の結果との違いを書く。繰り返したときは全部の結果を残し、最良の回だけを選ばない。</li>
       <li><b>(6) 異常のデータを分ける:</b>異常が起きたときのデータは、通常のデータと混ぜず、名前か台帳で見分けられるようにする。</li>
-      <li><b>(7) 人による確認:</b>人による確認の記録は、必須としない。ただし、自動にできない項目(画面読み上げソフト、フォーカスの順序、言葉の分かりやすさなど)は、報告書に「未実施」として必ず挙げ、出荷のときに誰が判断したかを残す((1) (d))。人による確認を行ったときは、日付、確かめた人、環境、結果を記録する(Identity 9-5 の確認記録のひな形を使ってよい)。</li>
+      <li><b>(7) 人による確認:</b>人による確認の記録は、必須としない。ただし、自動にできない項目(画面読み上げソフト、フォーカスの順序、言葉の分かりやすさなど)は、報告書に「未実施」として必ず挙げ、出荷のときに誰が判断したかを残す((1) (d))。人による確認を行ったときは、日付、確かめた人、環境、結果を記録する(10-4 のひな形を使ってよい)。</li>
       <li><b>(8) 不合格のまま出すとき:</b><span class="badge-tbd">未定</span> 第14条で正式に定める。それまでは (1) (d) による。<span class="due">期限:正式版(1.0.0)まで/担当:5garashi.com設計事務所</span></li>
       <li><b>(9) 試験を減らすとき:</b>試験を消す、まとめる、飛ばす(skip)、失敗してよいとする、ケースを減らす、確かめる条件を外すことは、確かめる中身を減らすことであり、(4) と同じく記録する。
         <ul class="plain">
@@ -646,6 +670,51 @@ footer strong{color:var(--ink)}
       <li><b>(5) 空のフォルダーを残す:</b>決まったフォルダー構成を使うときは、圧縮・展開やクラウドへの保存で空のフォルダーが消えないよう、構成を示す README などを置く。</li>
       <li><b>(6) 置き場所:</b>出した版ごとに、試験の記録(例:<span class="mono">records/&lt;製品&gt;-&lt;版&gt;.md</span>)を作り、試験のリポジトリか製品のリポジトリに入れて、版の管理の下に残す。記録には、対象と環境、件数と結果、未実施・適用外・判定不能とその理由、異常と逸脱、試験を変えた理由(9-2 (4))、出荷の判断(9-2 (1) (d))を載せる。手で書き写すと食い違いが出るため、件数と結果は報告書から自動で作れるようにすることを目指す。画面写真つきの報告書や結果のデータは、大きいため git に入れなくてよいが、9-2 (2) のとおり版ごとに残し、記録から場所(実行の日時のフォルダー名など)を引けるようにする。Release への添付などで公開の場に置くかは、第14条で定める。</li>
     </ul>
+
+    <h3>10-4. 確認記録のひな形</h3>
+    <p>次のひな形を写して使う。英語の README では、項目名を英語にする。</p>
+    <ul class="items">
+      <li><b>(1) アクセシビリティの確認記録(6-5):</b>README か試験報告書に載せる(Identity 4.21.0 の 9-5 から移した)。</li>
+    </ul>
+    <pre class="codeblock" tabindex="0" aria-label="アクセシビリティの確認記録のひな形">## アクセシビリティの確認記録 / Accessibility check record
+
+品質確認規定 6-5(Identity 7-7)の確認の記録です。
+
+- 確認日: YYYY-MM-DD
+- 使ったツール:
+- 確認した組み合わせ: 表示(ライト・ダーク)× 言語 × 画面の大きさ
+
+| 項目 | 判定 | 内容 |
+| :--- | :--- | :--- |
+| (a) 拡大200%で横スクロールが出ない | 合格 / 不合格 / 未実施 / 適用外 | |
+| (b) マウスなしで全操作できる | | |
+| (c) グレースケールでも意味が取れる | | |
+| (d) 画面幅320pxで縦スクロールだけで読める | | |
+| (e) 夜の配色で (a)〜(d) | | |
+| (f) コントラストテーマ(強制カラー) | | |
+| (g) 画面読み上げソフト | | |
+| (h) 文字の大きさの設定200% | | |
+| (i) 自動バックアップからの復元 | | |
+| (j) 外部のファイルの読み込み(同意前・同意後・読み込まない) | | |
+| (k) 図の文字の収まり・重なり(描画の成功とは別に目視) | | |</pre>
+    <ul class="items">
+      <li><b>(2) 文書の確認記録(6-4):</b>次の項目を書く(Identity 4.21.0 の MARKDOWN-CHECKLIST 7 節から移した)。</li>
+    </ul>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="文書の確認記録の項目">
+      <table class="ud">
+        <thead><tr><th scope="col">項目</th><th scope="col">書くこと</th></tr></thead>
+        <tbody>
+          <tr><td>対象の文書・版</td><td>ファイル名、文書の版、製品(ソース)の版</td></tr>
+          <tr><td>確認日・担当</td><td>日付と担当(人・AI)</td></tr>
+          <tr><td>描画エンジン</td><td>実際に使ったものと、その版</td></tr>
+          <tr><td>表示環境</td><td>GitHub(ライト・ダーク)、mdEditor(版と昼・夜)など、実際に見たもの</td></tr>
+          <tr><td>自動の確認</td><td>図の数、構文、相対リンクなど</td></tr>
+          <tr><td>目視の確認</td><td>対象の図、画面の幅、書体、昼・夜、重なりや切れの有無</td></tr>
+          <tr><td>書き出し</td><td>PDF・HTML など、実際に行ったものだけ</td></tr>
+          <tr><td>確かめていないこと・残る問題</td><td>表示の条件、読み上げ、改ページなど</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -739,15 +808,24 @@ footer strong{color:var(--ink)}
 
 <!-- ═══════════ 第14条 ═══════════ -->
 <section id="a14">
-  <div class="art-head"><span class="chip">第14条</span><h2>リリース手順</h2><span class="badge-tbd">未定</span></div>
+  <div class="art-head"><span class="chip">第14条</span><h2>リリース手順</h2><span class="badge-tbd">一部未定</span></div>
   <div class="art-body">
+    <h3>14-1. 版の確認とタグ</h3>
+    <p>Identity 12-7 の版の管理を、次のとおり確かめ、自動にする(Identity 4.21.0 の 12-7 (6)(11) から移した)。</p>
+    <ul class="items">
+      <li><b>(1) 版の確認:</b>改版したファイルの版が <span class="mono">VERSION</span> と一致すること、HTML の本文の <span class="mono">data-version</span> がヘッダーの版と一致することを、<span class="mono">tools/check_version.py</span> で確かめる(<span class="mono">--stamp</span> を付けると書き込む)。ツールは Identity のリポジトリのものを写して使ってよい(MIT)。</li>
+      <li><b>(2) タグと Release の自動化:</b>Identity 12-7 (11) のタグと Release は、GitHub で管理するフォルダーでは GitHub Actions で自動で作る。ひな形は Identity の <a href="https://github.com/5garashi/5garashi-identity/tree/main/templates/.github/workflows">templates/.github/workflows/</a> の <span class="mono">release.yml</span>。</li>
+      <li><b>(3) プルリクエストでの確認:</b>プルリクエストを使うリポジトリでは、<span class="mono">VERSION</span>、README の版の行、CHANGELOG.md の節(Identity 12-7 (1)(8)(9))がそろっていることと、既にあるタグを使い回していないことを確かめる。ひな形は同じ場所の <span class="mono">version-check.yml</span>。</li>
+    </ul>
+
+    <h3>14-2. 次版以降で定める項目</h3>
     <p>次版以降で、次の項目を定める。<span class="due">期限:正式版(1.0.0)まで/担当:5garashi.com設計事務所</span></p>
     <ul class="plain">
       <li>版を上げる:<span class="mono">VERSION</span>、CHANGELOG.md、README の版の行(Identity 12-7)</li>
       <li>試験:第9条の合格と、出す前の全件(4-2 (8))。報告書を Release への添付など公開の場に置くか(10-3 (6))</li>
       <li>出荷の検査:製造したもの全数に行う検査の項目、判定、記録の残し方(6-3)</li>
       <li>配布物・提出物の確認:チェックリスト(文書番号、版、承認、ファイル名)による確認(Identity 12-6)</li>
-      <li>署名、ストアへの提出、タグと Release(Identity 12-7 (11)(13))</li>
+      <li>署名、ストアへの提出(Identity 12-7 (13))</li>
       <li>不合格の項目があるまま出すときの判断と、その記録(9-2 (8))</li>
       <li>出した後の不具合の受け付け、直した版の出し方、同じ不具合を防ぐ試験の追加(第8条 (3))</li>
     </ul>
@@ -773,10 +851,9 @@ footer strong{color:var(--ink)}
       <table class="ud">
         <thead><tr><th scope="col">項目</th><th scope="col">期限</th><th scope="col">担当</th></tr></thead>
         <tbody>
-          <tr><td>第14条 リリース手順</td><td>正式版(1.0.0)まで</td><td>5garashi.com設計事務所</td></tr>
+          <tr><td>第14条 リリース手順(14-1 を除く)</td><td>正式版(1.0.0)まで</td><td>5garashi.com設計事務所</td></tr>
           <tr><td>9-2 (8) 不合格のまま出すとき</td><td>第14条と同じ</td><td>5garashi.com設計事務所</td></tr>
-          <tr><td>6-4 ほかの種類の必須項目</td><td>正式版(1.0.0)まで</td><td>5garashi.com設計事務所</td></tr>
-          <tr><td>Identity から確かめ方の条を移す(7-7 の確認の手順と記録、9-5 の確認記録のひな形、8-9 の確かめ方、12-7 の確かめ方とタグ・Release)。移した条の参照は、Identity 12-7 (15) のとおり CHANGELOG の対応で示す</td><td>次の版(0.9.0)</td><td>5garashi.com設計事務所</td></tr>
+          <tr><td>6-6 ほかの種類(Web ページ、コマンドラインのツール、スクリプト)の必須項目</td><td>正式版(1.0.0)まで</td><td>5garashi.com設計事務所</td></tr>
         </tbody>
       </table>
     </div>
