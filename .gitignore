@@ -1,0 +1,7 @@
+# ファイル名 / File: .gitignore
+# 概要 / Description: リポジトリに入れないファイル / Files kept out of the repository
+# 作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+# 作成日 / Created: 2026-10-13
+# ライセンス / License: MIT
+# SPDX-License-Identifier: MIT
+__pycache__/
