@@ -8,7 +8,7 @@
 -->
 # 5garashi.com設計事務所 品質確認規定 / Quality Rules
 
-バージョン / Version: 1.2.0([改版履歴 / Changelog](CHANGELOG.md))
+バージョン / Version: 1.3.0([改版履歴 / Changelog](CHANGELOG.md))
 
 準拠 / Conforms to: Design Office Identity 4.22.0
 

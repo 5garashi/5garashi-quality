@@ -11,6 +11,18 @@
 版ごとの変更を、新しい版を上に書く(Design Office Identity 12-7 (9))。
 Changes by version, newest first (Identity 12-7 (9)).
 
+## 1.3.0 — 2026-11-03
+
+共通処理でも、影響範囲と対応試験を特定できる場合は、作業中の試験を限定できるようにした。
+Shared-code changes may use targeted tests during development when their impact and corresponding tests can be fully identified.
+
+- 4-2 (2) を改め、(10) を追加した。変更が働く条件、全呼び出し元・共有状態・入口・出力先の追跡、対象外の入力・境界・エラーの回帰試験、起動試験、実行前の対応表と結果の記録を条件とする。条件を満たせば一回限りの承認は不要とした。
+  Revised 4-2 (2) and added (10): identify triggering conditions; trace all callers, shared state, entry points, and outputs; test unaffected inputs, boundaries, and error behavior; include startup tests; and report the mapping before execution and the results afterward. No one-off approval is needed when all conditions are met.
+- 起動・初期化、画面とホストの契約、共通の入出力・設定、全体のイベント、依存・ビルド・配布・試験の土台、削除・改名は対象外。影響や対応試験を特定できなければ全件とし、出す前の全件も残した。
+  Startup, the host/page contract, common I/O and settings, global events, dependencies, build/release/test infrastructure, and deletion/renaming remain excluded. Incomplete impact tracing or test coverage still requires the full suite. The full suite before release remains mandatory and cannot be narrowed.
+- 従来の一律全件は、共通処理の呼び出し先の見落としによる回帰を防いでいた。代わりに、全影響先の対応試験・境界の回帰確認・起動試験を必須とする。条番号の移動・削除はない。4-2 (2) の条件を改め、(10) に限定条件を新設した。
+  The former blanket full-suite rule guarded against missed callers. Its replacement requires tests for every affected destination, boundary regressions, and startup checks. No articles were moved or removed; 4-2 (2) was revised and (10) added.
+
 ## 1.2.0 — 2026-11-03
 
 AI によるレビューを、別の会社の AI に自動で頼み、作業している AI が判断して直す形にした。
