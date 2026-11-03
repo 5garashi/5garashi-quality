@@ -8,7 +8,7 @@
 -->
 # 5garashi.com設計事務所 品質確認規定 / Quality Rules
 
-バージョン / Version: 1.0.0([改版履歴 / Changelog](CHANGELOG.md))
+バージョン / Version: 1.1.0([改版履歴 / Changelog](CHANGELOG.md))
 
 準拠 / Conforms to: Design Office Identity 4.22.0
 
@@ -23,6 +23,7 @@ Web で公開しています: https://5garashi.github.io/5garashi-quality/ 。1.
 | `index.html` | 規定の本文。ブラウザーで開いて読む |
 | `VERSION` | 版の番号(Identity 12-7) |
 | `CHANGELOG.md` | 改版履歴 |
+| `TESTING.md` | このリポジトリを変えたときの確かめ方 |
 | `assets/` | Identity の公式アセット(ロゴタイプ・シンボルマーク)。CC BY-ND 4.0 |
 | `tools/check_version.py` | 版の番号が `VERSION` と一致するかを確かめる(Identity から写した MIT のツール) |
 | `.github/workflows/` | 版を上げたときにタグと Release を作る・プルリクエストで版を確かめる(Identity のひな形、MIT) |
