@@ -11,6 +11,18 @@
 版ごとの変更を、新しい版を上に書く(Design Office Identity 12-7 (9))。
 Changes by version, newest first (Identity 12-7 (9)).
 
+## 1.1.0 — 2026-11-03
+
+TESTING.md を必ず作ることと、AI への共通の指示の置き方を定めた。
+TESTING.md is now always created, and shared AI instructions have one source.
+
+- 第11条 (9):TESTING.md がないときは、新しく作るとき・改版するときに、決める人に確かめずに作る。自動の試験がまだないときも、何で確かめるかを書く。試験のしかたを変えたら、同じ変更で直す。
+  Art. 11 (9): create TESTING.md without asking when making or revising a product; describe the checks even without automated tests.
+- 第12条 (8) を新設:AI への共通の指示は1つの正本に書き、使うすべての AI が、どのフォルダーで起動しても読む場所へ写す。リポジトリごとに写しを置かない。写す先を足した・変えたときは、新しい会話で読み込まれていることを確かめる。AI が決まりを守らなかったときは、まず読み込まれていたかを確かめる。VS Code の Copilot が共通の指示を読み込んでおらず、水平展開をしなかった実例(2026-11-03)を載せた。
+  New Art. 12 (8): one source for shared AI instructions, copied to where every AI reads them, with a check that each AI loads them.
+- 本リポジトリに TESTING.md を足した(第11条 (9) の当てはめ)。
+  This repository now has a TESTING.md.
+
 ## 1.0.0 — 2026-11-03
 
 未定の項目をすべて定め、正式版とした。
