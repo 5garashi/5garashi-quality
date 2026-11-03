@@ -11,6 +11,36 @@
 版ごとの変更を、新しい版を上に書く(Design Office Identity 12-7 (9))。
 Changes by version, newest first (Identity 12-7 (9)).
 
+## 0.9.0 — 2026-11-03
+
+Identity から、確かめ方と記録の条を移した(Identity 4.22.0 と同時)。Identity には満たすべき条件を残し、本規定には確かめ方と記録を置く(Identity 1-4 (5))。
+Verification and record-keeping articles moved here from Identity (together with Identity 4.22.0); Identity keeps the requirements.
+
+- 6-4「文書(Markdown と図)」を定めた:3つを分けて確かめる、配る環境で確かめる(GitHub と mdEditor の両方、8-9 (8)(9) の文書の扱い)、確かめる項目、自動と目視を分けた記録、置き場所。Identity 8-9 (1)(5)(6) と MARKDOWN-CHECKLIST の 4 節から移した。
+  6-4 "Documents (Markdown and diagrams)" defined, from Identity 8-9 (1)(5)(6) and checklist section 4.
+- 6-5「公開する前のアクセシビリティの確認」を新設:Identity 7-7 の (a)〜(k) に判定(9-1)を付け、自動と人の確認を分け、10-4 (1) で記録する。Identity 7-7 の確認と記録から移した。
+  New 6-5: confirm and record Identity 7-7 (a) to (k) with the 9-1 verdicts.
+- 10-4「確認記録のひな形」を新設:(1) アクセシビリティの確認記録(Identity 9-5 から。結果の欄を 9-1 の判定にした)、(2) 文書の確認記録(チェックリストの 7 節から)。9-2 (7) の参照を 10-4 にした。
+  New 10-4 record templates, from Identity 9-5 and checklist section 7; 9-2 (7) now refers to it.
+- 14-1「版の確認とタグ」を新設:`check_version.py` による確認、Actions によるタグと Release、プルリクエストでの確認。Identity 12-7 (6)(11) から移した。第14条は「一部未定」とし、残りを 14-2 にまとめた。
+  New 14-1 on version checks, tags, and Releases, from Identity 12-7 (6)(11); Art. 14 is now partly defined.
+- 旧 6-4「ほかの種類」は 6-6 とし、Web ページ・コマンドラインのツール・スクリプトだけを未定に残した。第6条の表に「文書」の行と、画面を持つものに 6-5 を当てはめることを足した。1 (2) と第15条の未定の項目の表を合わせ、「Identity から確かめ方の条を移す」を表から外した。
+  Former 6-4 becomes 6-6; the Art. 6 table, 1 (2), and the table of undecided items are updated.
+- 10-4 のひな形を写せるよう、コードの枠の書式を足した(文字と背景は本文と同じ ink × paper)。
+  A code-block style is added for the templates.
+
+移した条の対応(Identity 12-7 (15)) / Mapping of moved articles:
+
+| Identity 4.21.0 | 移り先 |
+| :--- | :--- |
+| 7-7 の「公開する前に確認する」ことと、確認の記録 | 品質確認規定 6-5。(a)〜(k) の条件は 7-7 に残した |
+| 9-5 のアクセシビリティの確認記録のひな形 | 品質確認規定 10-4 (1) |
+| 8-9 (1) の確かめ方、(5) 配る環境での確かめ方と記録、(6) 置き場所 | 品質確認規定 6-4 (1)〜(5)。8-9 (1)(5)(6) には要点と移り先を残した |
+| MARKDOWN-CHECKLIST 4 節(描画と表示を確かめる) | 品質確認規定 6-4 (3) |
+| MARKDOWN-CHECKLIST 7 節(確認記録のひな形) | 品質確認規定 10-4 (2) |
+| 12-7 (6) 版の確かめ方 | 品質確認規定 14-1 (1) |
+| 12-7 (11) のうち、Actions による自動化とプルリクエストでの確認 | 品質確認規定 14-1 (2)(3) |
+
 ## 0.8.0 — 2026-11-03
 
 appAutoTester と mdEditor(1.0.21〜1.0.22)で実際に使っている決まりを取り入れた。
